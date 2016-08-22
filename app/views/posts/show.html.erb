@@ -1,0 +1,36 @@
+<div class="container">
+
+
+  <div class="post-podcast">
+
+      <div class="post">
+
+          <%= image_tag @post.image.url(:large) %>
+
+          <div class="container-post context-center">
+            <h3><%= @post.title%></h3>
+            <p><%= @post.body %></p>
+            <p><%= @post.created_at.strftime("%b %d, %Y")%></p>
+            <%= render 'disqus' %>
+          </div>
+
+      </div>
+
+
+  </div>
+  <div class="post-painel">
+      <div class="post">
+        <div class="header-painel">
+          <p>
+            Olá Pessoas!
+          </p>
+        </div>
+      <p>
+        Yellow Podcast é um Podcast sobre qualquer coisa do dia a dia, pra quem quer desopilar da vida!
+        <br><br>Só vem, e se diverte, vlw galera =]
+      </p>
+
+      </div>
+
+  </div>
+</div>

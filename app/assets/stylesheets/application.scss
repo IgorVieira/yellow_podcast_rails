@@ -1,0 +1,391 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "normalize";
+ @import url("https://fonts.googleapis.com/css?family=Raleway");
+ @font-face {
+ 	font-weight: normal;
+ 	font-style: normal;
+
+ }
+
+
+ body{
+   background-color: rgb(237, 237, 237);
+   font-weight: 400;
+ 	font-size: 1em;
+ 	font-family:Arial, sans-serif;
+ }
+
+
+ .clearfix:before,
+ .clearfix:after {
+ 	content: '';
+ 	display: table;
+ }
+
+ .clearfix:after {
+ 	clear: both;
+ }
+
+ a{
+  text-decoration: none;
+  outline: none;
+ }
+ .logo{
+   margin-top: 12px;
+   margin-right: 15px;
+   font-weight: 5px;
+ 	font-size: .8em;
+ 	letter-spacing: 4px;
+ 	text-transform: uppercase;
+ 	border: 2px solid #FFBF4F;
+ 	padding:0.5rem;
+ 	text-decoration: none;
+ 	color:#FFBF4F;
+ 	float: left;
+ }
+
+
+ .logo:hover{
+   color:#FFBF4F;
+ }
+
+ nav ul{
+   background-color: #5A4D5A;
+ 	overflow: hidden;
+ 	color: #ffffff;
+ 	letter-spacing: 4px;
+ 	padding: 0 45px;
+ 	text-align: right;
+   margin-top: 0;
+ 	-webkit-transition: max-height 0.7s;
+ 	-ms-transition: max-height 0.7s;
+ 	-moz-transition: max-height 0.7s;
+ 	-o-transition: max-height 0.7s;
+ 	transition: max-height 0.7s;
+ }
+
+ nav ul li{
+ 	cursor: pointer;
+ 	display: inline-block;
+ 	padding: 20px;
+ }
+
+ nav ul li:hover{
+  color:#52BDE8;
+ }
+
+
+
+ .handle{
+   margin-top: -20px;
+   height: 100px;
+ 	background:#5A4D5A;
+   width: 100%;
+ 	text-align: left;
+ 	box-sizing:border-box;
+ 	padding: 15px 10px;
+ 	cursor: pointer;
+ 	color: white;
+ 	display: none
+ }
+ @media screen and (max-width: 580px){
+
+ 	nav ul{
+ 		margin-top:0;
+ 		max-height: 0;
+ 	}
+ 	.showing{
+ 		max-height: 20em;
+ 	}
+ 	nav ul li{
+ 		box-sizing:border-box;
+ 		width: 100%;
+ 		padding: 20px;
+ 		text-align: left;
+ 	}
+
+ 	.handle{
+ 		display: block;
+ 	}
+
+
+  .post-podcast div.post{
+    -webkit-order:2;
+  }
+
+ .post-painel div.post{-webkit-order:1;}
+
+
+ }
+
+
+
+
+ .container {
+   display: flex; /* or inline-flex */
+   margin-bottom: 45rem;
+ }
+
+
+ .post-podcast {
+     width:750px;
+     height:500px;
+     margin-left:25px;
+     display: -webkit-flex;
+     display: -moz-flex;
+     display: -ms-flex;
+     display: -o-flex;
+     display: flex;
+
+     -webkit-flex-flow: column;
+     -moz-flex-flow: column;
+     -ms-flex-flow: column;
+     -o-flex-flow: column;
+     flex-flow: column;
+ }
+
+ .post-podcast div {
+     background:#fff;
+     margin:15px;
+     -webkit-flex:1 1 auto;
+     -moz-flex:1 1 auto;
+     -ms-flex:1 1 auto;
+     -o-flex:1 1 auto;
+     flex:1 1 auto;
+ }
+
+
+  .post p{
+    padding: 20px;
+  }
+
+
+  .post img{
+    width: 100%;
+    height: auto;
+  }
+
+ .post-painel{
+   width:450px;
+   height:250px;
+   margin-right:25px;
+   margin-left:25px;
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+
+   -webkit-flex-flow: column;
+   -moz-flex-flow: column;
+   -ms-flex-flow: column;
+   -o-flex-flow: column;
+   flex-flow: column;
+ }
+
+
+
+ .post-painel div {
+     background:#fff;
+     margin:15px;
+     -webkit-flex:1 1 auto;
+     -moz-flex:1 1 auto;
+     -ms-flex:1 1 auto;
+     -o-flex:1 1 auto;
+     flex:1 1 auto;
+ }
+
+
+ .post .header-painel{
+   background-color: #4EBEFF;
+   margin: 0 auto;
+   text-align: center !important;
+   font-size: 1.2em;
+ }
+
+
+
+ @media screen and (max-width: 580px){
+
+
+   .post-painel div.post{-webkit-order:1;}
+   .post-podcast div.post{ -webkit-order:2; }
+
+
+
+
+ }
+
+
+   @media screen and (max-width: 1216px) {
+     .container {
+       display: list-item;
+     }
+
+     .post-painel, .post-podcast{
+       width: 90%;
+     }
+
+
+   }
+
+   @media screen and (max-width: 414px) {
+     .container {
+       display: list-item;
+     }
+
+     .post-painel, .post-podcast{
+       width: 85%;
+     }
+
+
+   }
+
+   @media screen and (max-width: 411px) {
+     .container {
+       display: list-item;
+     }
+
+     .post-painel, .post-podcast{
+       width: 83.5%;
+     }
+
+
+   }
+
+   @media screen and (max-width: 375px) {
+     .container {
+       display: list-item;
+     }
+
+     .post-painel, .post-podcast{
+       width: 85%;
+     }
+
+
+   }
+
+
+ .container-footer{
+   margin-bottom: 1rem;
+   background-color: #575A4D;
+ }
+
+ .logo-footer{
+   font-size: 1em;
+   margin-top: 25px;
+   font-weight: 700;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   border: 2px solid #FFBF4F;
+   padding:1rem;
+   text-decoration: none;
+   color:#FFBF4F;
+ }
+
+ .footer{
+   margin-top: 250px;
+   text-align:center;
+   display:block;
+   color:#fff;
+   padding:20px;
+ }
+
+ .footer
+ {
+   background:#e74c3c;
+
+ }
+
+ .footer a{
+   color:#fff;
+ }
+
+
+ .menu-anchor {
+   margin-top: 1rem;
+ 	width: 40px;
+ 	height: 32px;
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	position: relative;
+ 	text-indent: -9999px;
+ 	overflow: hidden;
+ 	cursor: pointer;
+ 	background: #000;
+     margin-left:1rem;
+ }
+
+ .menu-anchor:before {
+ 	content: "";
+ 	display: block;
+ 	margin: 7px auto;
+ 	width: 70%;
+ 	height: 0.25em;
+ 	background: #f49c14;
+ 	box-shadow: 0 .45em 0 0 #f49c14, 0 .9em 0 0 #f49c14;
+ }
+
+
+.container-post:after {
+  content:"";
+  display:table;
+  clear:both
+}
+
+
+.context-center{
+  text-align:justify !important;
+}
+
+
+
+form{
+	margin-top: 2rem;
+}
+
+input[type="text"], input[type="email"], textarea{
+  width:85%;
+  height: 1em;
+  border: 2px solid #000000;
+  padding: 1em;
+  margin: .5em 0 2em 0;
+}
+
+
+textarea{
+  min-height:10em;
+}
+
+input[type="submit"], .btn{
+  background-color: #36AFFF; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+
+.title{
+  margin-left: 50px;
+}

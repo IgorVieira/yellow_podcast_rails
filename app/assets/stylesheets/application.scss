@@ -138,13 +138,12 @@
 
  .container {
    display: flex; /* or inline-flex */
-   margin-bottom: 45rem;
+   margin-bottom: 1em;
  }
 
 
  .post-podcast {
      width:750px;
-     height:500px;
      margin-left:25px;
      display: -webkit-flex;
      display: -moz-flex;
@@ -299,7 +298,6 @@
  }
 
  .footer{
-   margin-top: 250px;
    text-align:center;
    display:block;
    color:#fff;
